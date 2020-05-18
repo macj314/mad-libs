@@ -10,12 +10,16 @@ namespace MadLibs.Controllers
     public ActionResult Form() { return View(); }
 
     [Route("/story")]
-    public ActionResult Story(string name, string ad, string thing)
+    public ActionResult Story(string name, string ad, string thing, string verb, string adverb, string noun, int number)
     {
       LibVariable myLibVariable = new LibVariable();
       myLibVariable.Name = name;
       myLibVariable.AD = ad;
       myLibVariable.Thing = thing;
+      myLibVariable.Verb = verb;
+      myLibVariable.Adverb = adverb;
+      myLibVariable.Noun = noun;
+      myLibVariable.Number = number;
       return View(myLibVariable);
     }
   }
