@@ -10,11 +10,11 @@ namespace MadLibs.Controllers
     public ActionResult Form() { return View(); }
 
     [Route("/story")]
-    public ActionResult Story(string name, string adventurerDescriptor, string thing)
+    public ActionResult Story(string name, string ad, string thing)
     {
       LibVariable myLibVariable = new LibVariable();
       myLibVariable.Name = name;
-      myLibVariable.AdventurerDescriptor = adventurerDescriptor;
+      myLibVariable.AD = ad;
       myLibVariable.Thing = thing;
       return View(myLibVariable);
     }
